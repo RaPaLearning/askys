@@ -9,5 +9,5 @@ if [ "$COVERAGE" -lt 100 ]; then
     echo "Coverage is less than 100%. Failing the build..."
     exit 1
 else
-    echo "Coverage is greater than or equal to 100%."
+    echo "Coverage is complete :)"
 fi
