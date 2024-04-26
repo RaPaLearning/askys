@@ -57,4 +57,4 @@ Other ways of translating the word
 
 
 if __name__ == '__main__':
-    unittest.main() # pragma: no cover
+    unittest.main()  # pragma: no cover
