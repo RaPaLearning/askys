@@ -1,7 +1,9 @@
+import os
 import re
+import sys
 
 patterns_to_remove = [
-    r'^#.*\n',
+    r'^#.*?\n',
     r'```shloka-sa\n(.*?)\n```',
     r'```shloka-sa-hk\n(.*?)\n```',
     r'`(.*?)`'
@@ -11,7 +13,7 @@ patterns_to_remove = [
 def md_to_english(md):
     english = md
     for pattern in patterns_to_remove:
-        english = re.sub(pattern, '', english)
+        english = re.sub(pattern, '', english, flags=re.DOTALL)
     english = re.sub(r'\u200b', ' ', english)
     english = re.sub(r'<a[^>]*>.*?</a>', '', english, flags=re.DOTALL) # no html tags 
     english = re.sub(r'\n_(.*?)_', '', english, flags=re.DOTALL) # no italics explanations
@@ -26,3 +28,16 @@ def md_paras_to_english_list(md):
     english_list_with_newlines = re.split(r'\n\n', eng_no_space_bw_newlines)
     english_list_no_newlines = list(map(lambda e: re.sub(r'\n', ' ', e), english_list_with_newlines))
     return english_list_no_newlines
+
+
+def mds_to_english_dict(path):
+    english_dict = {}
+    for filename in os.listdir(path):
+        if filename.endswith('.md'):
+            with open(os.path.join(path, filename), 'r', encoding='utf-8') as f:
+                english_dict[filename] = md_paras_to_english_list(f.read())
+    return english_dict
+
+
+if __name__ == '__main__':
+    print(mds_to_english_dict(sys.argv[1]))

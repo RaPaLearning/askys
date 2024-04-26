@@ -1,5 +1,5 @@
 import unittest
-from md_to_english import md_to_english, md_paras_to_english_list
+from md_to_english import md_to_english, md_paras_to_english_list, mds_to_english_dict
 
 
 class TestMDtoEnglish(unittest.TestCase):
@@ -16,6 +16,7 @@ Till now, The Lord spoke
 
 ```shloka-sa
 कार्यम् कर्म करोति यः ।
+कार्यम् कर्म करोति यः ।।
 ```
 ```shloka-sa-hk
 kAryam karma karoti yaH |
@@ -48,6 +49,11 @@ Other ways of translating the word
 [yoga](6-20_to_6-23.md#yoga_state_of_being)
 ’. This is explained as [Karmayoga](2-40.md#karmayoga).''')
         self.assertEqual('We call it ‘ yoga ’. This is explained as Karmayoga.', english_list[0].strip())
+
+    def test_md_files_to_english_list_in_dict(self):
+        english_dict = mds_to_english_dict('test')
+        self.assertIsInstance(english_dict, dict)
+        self.assertIn('6-1.md', english_dict)
 
 
 if __name__ == '__main__':
