@@ -31,17 +31,24 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(len(source['show']), 13, f"show: {source['show']}")
 
     def test_comments_are_merged(self):
-        lines_mapped_to_comments = merge_paras_with_comments(text_content_with_7_lines, comment_json)
-        line_mapping_list = list(lines_mapped_to_comments)
-        self.assertEqual(len(line_mapping_list), 7)
+        merged_para_comments = merge_paras_with_comments(text_content_with_7_lines, comment_json)
+        self.assertEqual(len(merged_para_comments), 7)
 
-        self.assertIn('line', line_mapping_list[0]) # at 0 is "Bring the best in you"
-        self.assertNotIn('link', line_mapping_list[0])
+        self.assertIn('line', merged_para_comments[0]) # at 0 is "Bring the best in you"
+        self.assertNotIn('link', merged_para_comments[0])
         
-        self.assertIn('link', line_mapping_list[3]) # at 3 is "Step up,..."
-        self.assertIn('show', line_mapping_list[3])
-        self.assertEqual('8-14_to_8-15', line_mapping_list[3]['link'])
-        self.assertEqual('11-55', line_mapping_list[5]['link']) # at 5 is "Whatever be your environment..."
+        self.assertIn('link', merged_para_comments[3]) # at 3 is "Step up,..."
+        self.assertIn('show', merged_para_comments[3])
+        self.assertEqual('8-14_to_8-15', merged_para_comments[3]['link'])
+        self.assertEqual('11-55', merged_para_comments[5]['link']) # at 5 is "Whatever be your environment..."
+
+    def test_non_matching_comments_throw_exception(self):
+        text_content = '''
+first line
+second line
+'''
+        comment_json = '''[{"paragraph": "something else", "comment": "link: 14-14\nshow: found"}]'''
+        self.assertRaises(ValueError, lambda: merge_paras_with_comments(text_content, comment_json))
 
 
 if __name__ == '__main__':

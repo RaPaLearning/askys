@@ -28,4 +28,8 @@ def find_linkage(line, comment_json):
 def merge_paras_with_comments(text, comment_json_str):
     comment_json = json.loads(comment_json_str.replace('\nshow', ',show'))
     nonblank_lines = [line for line in text.split('\n') if len(line.strip()) > 0]
-    return map(lambda line: {'line': line, **find_linkage(line, comment_json)}, nonblank_lines)
+    merged_para_comments = list(map(lambda line: {'line': line, **find_linkage(line, comment_json)}, nonblank_lines))
+    merged_comment_count = len([e for e in merged_para_comments if 'link' in e])
+    if merged_comment_count != len(comment_json):
+        raise ValueError(f'some comments not matched')
+    return merged_para_comments
