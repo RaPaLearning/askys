@@ -5,11 +5,13 @@ from openai import OpenAI
 import os
 
 client = OpenAI()
-
+counter_for_unique = 0
 
 def make_file_name_from_text(text):
+   global counter_for_unique
    words = text.split()
-   unique_suffix = random.choice('bcdfghjklmnprstvwxyz') + random.choice('aeiou')
+   counter_for_unique += 1
+   unique_suffix = '{:02d}'.format(counter_for_unique)
    return f'{only_alphabets(words[0])}_{only_alphabets(words[-1])}_{unique_suffix}.mp3'
 
 
