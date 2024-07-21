@@ -5,11 +5,11 @@ comment_json = '''
 [
   {
     "paragraph": "Whatever be your environment, intend to work for Krishna.",
-    "comment": "link: 11-55\nshow: मत् कर्म कृत् mat karma kRt dedicates actions Me"
+    "comment": "link: 11-55\\nshow: मत् कर्म कृत् mat karma kRt dedicates actions Me"
   },
   {
     "paragraph": "Step up, and recognize that you aren&#39;t the only cause of your actions.",
-    "comment": "link: 8-14_to_8-15\nshow: अधिष्ठानम् adhiSThAnam base, कर्ता kartA doer करणम् karaNam organs दैवम् daivam Divine"
+    "comment": "link: 8-14_to_8-15\\nshow: अधिष्ठानम् adhiSThAnam base, कर्ता kartA doer करणम् karaNam organs दैवम् daivam Divine"
   }
 ]'''
 
@@ -23,10 +23,10 @@ Whatever be your environment, intend to work for Krishna.
 Try it out now. Does it bring out the best in you?
 '''
 
-class TestStringMethods(unittest.TestCase):
+class TestMergeAsky(unittest.TestCase):
 
     def test_comment_converted_to_dict(self):
-        source = comment_to_dict("link: 11-55,show: मत् कर्म कृत् mat karma kRt dedicates actions Me मत् परमः mat paramaH")
+        source = comment_to_dict("link: 11-55\nshow: मत् कर्म कृत् mat karma kRt dedicates actions Me मत् परमः mat paramaH")
         self.assertEqual(source['link'], '11-55')
         self.assertEqual(len(source['show']), 13, f"show: {source['show']}")
 

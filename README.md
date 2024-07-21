@@ -1,3 +1,15 @@
+# Askys
+
+This repository contains playable feeds from the Gitabhashya.
+
+It also has code to process a Google document into a playable.
+
+## Processing a Google doc
+
+It uses OpenAI's text-to-speech conversion. So set the API key: `export OPENAI_API_KEY=`the_api_key
+
+Run: `bash asky_to_playable.sh` google_doc_id
+
 ## Recommended step for unit testing
 
 If your tests are in separate folder then add an  `__init__.py` file to the test folder to make it a package. This simple step will ensure that the test folder is recognized as a package and can be easily imported.

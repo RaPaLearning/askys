@@ -1,2 +1,5 @@
 **/__pycache__
 .coverage
+output/*.txt
+output/*.json
+**/*.mp3
