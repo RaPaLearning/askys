@@ -10,6 +10,8 @@ It uses OpenAI's text-to-speech conversion. So set the API key: `export OPENAI_A
 
 Run: `bash asky_to_playable.sh` google_doc_id
 
+First example: `bash asky_to_playable.sh 11No58DpoVARwL-6qsq9jaPcl1ph29hTO7g_EeDw6rB8`
+
 ## Recommended step for unit testing
 
 If your tests are in separate folder then add an  `__init__.py` file to the test folder to make it a package. This simple step will ensure that the test folder is recognized as a package and can be easily imported.
