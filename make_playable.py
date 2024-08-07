@@ -1,6 +1,7 @@
 import json
 import sys
 import os
+import re
 import shutil
 from line_to_speech import text_to_speech
 
@@ -8,7 +9,8 @@ playables_dir = 'playables'
 
 
 def make_playable_dir_name(para_comments):
-    return para_comments[0]['line'].lower().replace(' ', '_')
+    return re.sub('[^a-z_]', '', para_comments[0]['line'].lower().replace(' ', '_'))
+
 
 def make_empty_playable_dir(para_comments):
     playable_dir_path = os.path.join(playables_dir, make_playable_dir_name(para_comments))
