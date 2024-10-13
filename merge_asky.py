@@ -11,6 +11,10 @@ def content_matches(line1, line2):
     return only_alphabets(line1) == only_alphabets(line2)
 
 
+def split_shows(show_as_string):
+    return re.findall(r'\[.*?\]|\S+', show_as_string)
+
+
 def comment_to_dict(comment):
     comment_as_jsonstr = comment.replace('link: ', '{"link": "').replace('\nshow:', '","show": "') + '"}'
     try:
@@ -21,7 +25,7 @@ def comment_to_dict(comment):
         exit(1)
     comment_as_dict = {'link': comment_with_show_as_string['link']}
     if 'show' in comment_with_show_as_string:
-        comment_as_dict['show'] = comment_with_show_as_string['show'].split()
+        comment_as_dict['show'] = split_shows(comment_with_show_as_string['show'])
     return comment_as_dict
 
 

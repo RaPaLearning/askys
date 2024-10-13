@@ -26,9 +26,11 @@ Try it out now. Does it bring out the best in you?
 class TestMergeAsky(unittest.TestCase):
 
     def test_comment_converted_to_dict(self):
-        source = comment_to_dict("link: 11-55\nshow: मत् कर्म कृत् mat karma kRt dedicates actions Me मत् परमः mat paramaH")
+        source = comment_to_dict("link: 11-55\nshow: मत् कर्म कृत् [mat karma kRt] dedicates actions Me मत् परमः [mat paramaH]")
         self.assertEqual(source['link'], '11-55')
-        self.assertEqual(len(source['show']), 13, f"show: {source['show']}")
+        self.assertIn('[mat karma kRt]', source['show'])
+        self.assertIn('[mat paramaH]', source['show'])
+        self.assertEqual(len(source['show']), 10, f"show: {source['show']}")
 
     def test_comments_are_merged(self):
         merged_para_comments = merge_paras_with_comments(text_content_with_7_lines, comment_json)
