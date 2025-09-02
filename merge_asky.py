@@ -16,7 +16,7 @@ def split_shows(show_as_string):
 
 
 def comment_to_dict(comment):
-    comment_as_jsonstr = comment.replace('link: ', '{"link": "').replace('\nshow:', '","show": "') + '"}'
+    comment_as_jsonstr = comment.replace('\u00a0', ' ').replace('link: ', '{"link": "').replace('\nshow:', '","show": "') + '"}'
     try:
         comment_with_show_as_string = json.loads(comment_as_jsonstr)
     except json.decoder.JSONDecodeError as e:

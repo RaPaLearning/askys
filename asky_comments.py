@@ -17,7 +17,11 @@ def write(s, file_name):
 
 def get(appid, doc_id):
     app_url = f'{app_script_urlbase}/{appid}/exec'
-    return requests.get(app_url, params={'id': doc_id})
+    response = requests.get(app_url, params={'id': doc_id})
+    if response.status_code != 200:
+        print(f'Error: {response.status_code}')
+        raise ValueError(f'Request failed: {response.status_code}')
+    return response
 
 
 if __name__ == '__main__':
