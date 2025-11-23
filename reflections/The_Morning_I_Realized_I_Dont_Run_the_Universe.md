@@ -235,7 +235,7 @@ You just hold the pen lightly.
 
 ---
 
-### **ChatGPT**
+### **me**
 
 This was good, but I liked the natural first person narratives of the previous chata
 
@@ -344,7 +344,7 @@ That’s how you recognize Krishna.
 
 ---
 
-### **ChatGPT**
+### **me**
 
 You wrote: "Krishna writes the outcome."
 Where exactly is that in the Gita?
@@ -436,7 +436,7 @@ Just let me know — I can tune it to your preferred level of strictness.
 
 ---
 
-### **ChatGPT**
+### **me**
 
 The statement above these - "You act; results arise through the world governed by Krishna" seems the most accurate to me
 
@@ -497,7 +497,7 @@ Would you like that?
 
 ---
 
-### **ChatGPT**
+### **me**
 
 Sure, write it in the engaging, friendly way like you usually do, as a humble devotee
 
@@ -601,7 +601,7 @@ that’s Him.
 
 ---
 
-### **ChatGPT**
+### **me**
 
 Beautiful. Indeed, it's important to stay connected to Krishna and let go of outcomes. So is there no point in driving towards objectives? Standing for my team? Reaching out to others, since the Self is pure and doesn't need anyone else?
 
@@ -720,7 +720,7 @@ If you’d like, we can go even deeper into how a Sri Vaishnava balances respons
 
 ---
 
-### **ChatGPT**
+### **me**
 
 Sure, let's do it
 
