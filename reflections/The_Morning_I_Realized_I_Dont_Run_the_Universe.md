@@ -1,7 +1,10 @@
 # The Morning I Realized I Don’t Run the Universe
 
 Date: 2025-11-21
-Source: [chat.openai.com](https://chatgpt.com/c/691d2833-41dc-8323-b2a3-430edc832d7c)
+
+Sources: [2-47, 3-40, 11-55](https://rapalearning.com/gitapower/feed/2-47.3-40.11-55)
+
+Conversation: [chat.openai.com](https://chatgpt.com/c/691d2833-41dc-8323-b2a3-430edc832d7c)
 
 ---
 
