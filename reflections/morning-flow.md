@@ -9,14 +9,12 @@ flowchart TD
     C --> F[the pull of desire]
     E -->|has| F
 
-    F -->|then| G[how do I come back?]
-    G --> H["Connect every moment to Krishna (11-55)"]
+    F -->|then how do I come back?| H["Connect every moment to Krishna (11-55)"]
     A -->|still| I[avoid inaction]
     I -->|why| D
 
-    D --> J[Intent and effort are yours]
-    J -->|so| K[outcomes don't define you]
-    K -->|instead| L[be Krishna's compassion and commitment]
+    D --> J[Intent and effort are yours. Outcomes don't define you]
+    J -->|instead| L[be Krishna's compassion and commitment]
     L -->|how| M[Practice Surrender]
 
     H -->|but| N[I still want outcomes]
