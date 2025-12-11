@@ -2,18 +2,16 @@
 
 ```mermaid
 flowchart TD
-    A["You don't run it (2-47)"] -->|what makes it happen| E[the world governed by Krishna]
+    A["You don't run the show (2-47)"] -->|what makes it happen| E[the world governed by Krishna]
     A -->|so| C["what's happening in me? (3-40)"]
-    A -->|but| D[then what's the point?]
 
     C --> F[the pull of desire]
     E -->|has| F
 
     F -->|then how do I come back?| H["Connect every moment to Krishna (11-55)"]
     A -->|still| I[avoid inaction]
-    I -->|why| D
 
-    D --> J[Intent and effort are yours. Outcomes don't define you]
+    I -->|why?| J[Intent and effort are yours. Outcomes don't define you]
     J -->|instead| L[be Krishna's compassion and commitment]
     L -->|how| M[Practice Surrender]
 
