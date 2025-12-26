@@ -6,9 +6,9 @@ flowchart TD
 %% =========================
 %% COLOR DEFINITIONS
 %% =========================
-classDef paramatma stroke:#FF9933,stroke-width:1px
+classDef paramatma stroke:#FF9933,stroke-width:3px
 classDef roopa stroke:#1f4e79,stroke-width:1px
-classDef vyuha stroke:#7f6000,stroke-width:1px
+classDef vyuha stroke:#8B4513,stroke-width:2px
 classDef anga stroke:#385723,stroke-width:1px
 classDef archa stroke:#00FFFF,stroke-width:2px
 
