@@ -6,12 +6,11 @@ flowchart TD
 %% =========================
 %% COLOR DEFINITIONS
 %% =========================
-classDef paramatma fill:#f2f2f2,stroke:#333,stroke-width:1px
-classDef roopa fill:#e6f2ff,stroke:#1f4e79,stroke-width:1px
-classDef vyuha fill:#fff2cc,stroke:#7f6000,stroke-width:1px
-classDef sharanagati fill:#fde9d9,stroke:#843c0c,stroke-width:1px
-classDef anga fill:#e2efda,stroke:#385723,stroke-width:1px
-classDef archa fill:#f4cccc,stroke:#990000,stroke-width:2px
+classDef paramatma stroke:#FF9933,stroke-width:1px
+classDef roopa stroke:#1f4e79,stroke-width:1px
+classDef vyuha stroke:#7f6000,stroke-width:1px
+classDef anga stroke:#385723,stroke-width:1px
+classDef archa stroke:#00FFFF,stroke-width:2px
 
 %% =========================
 %% PARAMATMA & ROOPAS
@@ -35,14 +34,13 @@ C -->|protection & action| C4[Aniruddha]:::vyuha
 %% =========================
 %% SHARANAGATI
 %% =========================
-G[Sharanagati / Prapatti]:::sharanagati
-
-G --> G1[Ānukūlya-saṅkalpa]:::anga
-G --> G2[Prātikūlya-varjana]:::anga
-G --> G3[Kārpaṇya]:::anga
-G --> G4[Rakṣiṣyatīti-viśvāsa]:::anga
-G --> G5[Goptṛtva-varaṇa]:::anga
-G --> G6[Ātma-nikṣepa]:::anga
+subgraph Sharanagati
+G1[Ānukūlya-saṅkalpa]:::anga --- G2[Prātikūlya-varjana]:::anga
+G2 --- G3[Kārpaṇya]:::anga
+G3 --- G4[Rakṣiṣyatīti-viśvāsa]:::anga
+G4 --- G5[Goptṛtva-varaṇa]:::anga
+G5 --- G6[Ātma-nikṣepa]:::anga
+end
 
 %% =========================
 %% VYUHA → AṄGA MAPPING
