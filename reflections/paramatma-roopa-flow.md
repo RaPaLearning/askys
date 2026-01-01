@@ -19,17 +19,17 @@ A[Paramatma]:::paramatma
 
 A -->|transcendent fullness| B[Para]:::roopa
 A -->|organized accessibility| C[Vyuha]:::roopa
-A -->|historical compassion| D[Vibhava]:::roopa
+A -->|evident<br>compassion| D[Vibhava]:::roopa
 A -->|inner ruler| E[Antaryami / Harda]:::roopa
 A -->|patient presence| F[Archa]:::archa
 
 %% =========================
 %% VYUHA EXPRESSIONS
 %% =========================
-C -->|integrated six guṇas| C1[Vasudeva]:::vyuha
-C -->|jiva & bondage| C2[Sankarshana]:::vyuha
-C -->|karma & intention| C3[Pradyumna]:::vyuha
-C -->|protection & action| C4[Aniruddha]:::vyuha
+C -->|integrated fullness| C1[Vasudeva]:::vyuha
+C -->|"Jñāna+Bala<br>(removes opposition)"| C2[Sankarshana]:::vyuha
+C -->|"Aiśvarya+Vīrya<br>(ownership sans fatigue)"| C3[Pradyumna]:::vyuha
+C -->|"Śakti+Tejas<br>(overwhelming certainty)"| C4[Aniruddha]:::vyuha
 
 %% =========================
 %% SHARANAGATI
